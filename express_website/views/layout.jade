@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Express Site
+    title #{title} | Express Site
     meta( charset='utf-8' )
     meta( http-quiv='X-UA-Compatible', content='IE=edge' )
     meta( name='viewport', content='width=device-width, initial-scale=1.0' )
@@ -21,11 +21,13 @@ html
                     ul.nav.navbar-nav.navbar-right
                         li(class=(title === 'Home' ? 'active' : ''))
                             a(href='/') Home
-                        li(class=(title === 'About' ? 'active' : ''))
+                        li(class=(title === 'About Us' ? 'active' : ''))
                             a(href='/about') About Us
                         li(class=(title === 'Contact' ? 'active' : ''))
                             a(href='/contact') Contact
     block content
+    footer
+        p &copy; Tyson Sorensen 2015, All Rights Reserved
 
     script( src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' )
     script( src='/javascripts/bootstrap.js' )

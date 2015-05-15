@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+var User = require('../models/user');
+
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
@@ -66,7 +68,7 @@ router.post('/register', function(req, res, next){
 			password2: password2
 		});
 	} else {
-		var new_user = new User({
+		var newUser = new User({
 			name: name,
 			email: email,
 			username: username,
@@ -75,7 +77,7 @@ router.post('/register', function(req, res, next){
 		});
 
 		//create user
-		User.createUser(new_user, function(err, user){
+		User.createUser(newUser, function(err, user){
 			if(err) throw err;
 			console.log(user);
 		});

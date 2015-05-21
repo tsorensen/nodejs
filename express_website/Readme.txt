@@ -4,4 +4,4 @@ Project features:
 - Routing
 - Jade templating
 - Using views
-- <a href="https://github.com/andris9/Nodemailer">Nodemailer</a> module
+- [Nodemailer](https://github.com/andris9/Nodemailer) module

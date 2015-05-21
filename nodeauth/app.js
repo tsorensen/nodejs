@@ -72,6 +72,12 @@ app.use(function (req, res, next) {
   next();
 });
 
+//gives global access to user for layout jade file, etc.
+app.get('*', function(req, res, next){
+  res.locals.user = req.user || null;
+  next();
+});
+
 app.use('/', routes);
 app.use('/users', users);
 

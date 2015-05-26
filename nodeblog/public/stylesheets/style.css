@@ -33,6 +33,11 @@ h1, h2, h3, p {
 	margin-bottom: 0;
 }
 
+h1.adding {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
 p {
 	margin: 0;
 }
@@ -85,6 +90,63 @@ a.more {
 	padding: 10px;
 	margin-top:30px;
 }
+
+label {
+	display: inline-block;
+	width:180px;
+}
+
+input, select, textarea {
+	margin-bottom: 15px;
+}
+
+input[type='text'], select, textarea {
+	padding: 3px;
+	height: 20px;
+	width: 200px;
+	border:1px solid #ccc;
+}
+
+select {
+	height: 28px;
+}
+
+textarea {
+	height:70px;
+	width:400px;
+}
+
+#cke_body {
+	width: 560px;
+	margin: 0 0 30px 180px;
+}
+
+.alert {
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	list-style:none;
+}
+
+.alert-danger {
+	color: #a94442;
+	background-color: #f2dede;
+	border-color: #ebccd1;
+}
+
+ul.success li {
+	padding: 15px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	color: #3c763d;
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+	list-style:none;
+}
+
 
 footer {
 	margin-top: 30px;

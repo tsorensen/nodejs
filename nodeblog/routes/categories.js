@@ -3,6 +3,18 @@ var router = express.Router();
 var mongo = require('mongodb');
 var db = require('monk')('localhost/nodeblog');
 
+// :category is placeholder for whatever is in url
+router.get('/show/:category', function(req, res, next){
+	var db = req.db;
+	var posts = db.get('posts'); //posts is name of collection
+	posts.find({category: req.params.category}, {}, function(err, posts){
+		res.render('index', {
+			"title": req.params.category + " posts",
+			"posts": posts
+		});
+	});
+});
+
 router.get('/add', function(req, res, next) {
 	res.render('addcategory', {
 		"title": "Add Category"

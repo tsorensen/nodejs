@@ -2,39 +2,14 @@
 
 {<body}
 	{#books}
-		{.title}
+		<div class="large-3 columns book">
+			<img class="book_covers" src="/img/{.cover}">
+			<h4>{.title}</h4>
+			<p class="descr">{.truncText}...</p>
+			<div class="price">Buy it for <span>${.price}</span></div>
+			<br>
+			<a href="/books/details/{._id}" class="button small">Book Details</a>
+		</div>
 	{/books}
 
-	<div class="large-3 columns book">
-		<img src="/img/node1.jpeg">
-		<h4>Professional Node.js</h4>
-		<p>Nullam in quam nec nibh auctor rhoncus et ac lectus.</p>
-		<div class="price">Buy it for <span>$19.99</span></div>
-		<br>
-		<a href="/books/details/1" class="button small">Book Details</a>
-	</div>
-	<div class="large-3 columns book">
-		<img src="/img/js4.jpeg">
-		<h4>JavaScript - The Definitive Guide</h4>
-		<p>Nullam in quam nec nibh auctor rhoncus et ac lectus.</p>
-		<div class="price">Buy it for <span>$24.97</span></div>
-		<br>
-		<a href="/books/details/1" class="button small">Book Details</a>
-	</div>
-	<div class="large-3 columns book">
-		<img src="/img/ng2.jpeg">
-		<h4>Mastering Web App Dev with AngularJS</h4>
-		<p>Nullam in quam nec nibh auctor rhoncus et ac lectus.</p>
-		<div class="price">Buy it for <span>$17.99</span></div>
-		<br>
-		<a href="/books/details/1" class="button small">Book Details</a>
-	</div>
-	<div class="large-3 columns book">
-		<img src="/img/html3.jpeg">
-		<h4>RWD with HTML5 and CSS3</h4>
-		<p>Nullam in quam nec nibh auctor rhoncus et ac lectus.</p>
-		<div class="price">Buy it for <span>$15.97</span></div>
-		<br>
-		<a href="/books/details/1" class="button small">Book Details</a>
-	</div>
 {/body}

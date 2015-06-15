@@ -13,7 +13,12 @@ var bookModel = function(){
 		cover: String
 	});
 
+	// Shorten text (description)
+	bookSchema.methods.truncText = function(length){
+		return this.description.substring(0, length);
+	}
+
 	return mongoose.model('Book', bookSchema);
 };
 
-module.exports = new bookModel;
+module.exports = new bookModel();

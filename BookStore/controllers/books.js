@@ -12,6 +12,12 @@ module.exports = function (router) {
         	if(err) {
         		console.log(err);
         	}
+
+        	var model = {
+        		book: book
+        	};
+
+        	res.render('books/details', model);
         });     
     });
 };

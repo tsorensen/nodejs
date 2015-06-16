@@ -31,6 +31,8 @@
 
 <div class="row">
 	<div class="large-12 columns">
+		<!-- pipe s allows html to render in browser -->
+		{messages|s}
 		{+body /}
 	</div>
 </div>

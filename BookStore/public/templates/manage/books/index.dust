@@ -14,34 +14,15 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td>342s425e13f515</td>
-				<td>Book Sample</td>
-				<td>Some category</td>
-				<td><a class="button tiny" href="/manage/books/edit/1">Edit</a></td>
-				<td><a class="button tiny alert removeBook" href="#">Delete</a></td>
-			</tr>
-			<tr>
-				<td>342s425e13f515</td>
-				<td>Book Sample</td>
-				<td>Some category</td>
-				<td><a class="button tiny" href="/manage/books/edit/1">Edit</a></td>
-				<td><a class="button tiny alert removeBook" href="#">Delete</a></td>
-			</tr>
-			<tr>
-				<td>342s425e13f515</td>
-				<td>Book Sample</td>
-				<td>Some category</td>
-				<td><a class="button tiny" href="/manage/books/edit/1">Edit</a></td>
-				<td><a class="button tiny alert removeBook" href="#">Delete</a></td>
-			</tr>
-			<tr>
-				<td>342s425e13f515</td>
-				<td>Book Sample</td>
-				<td>Some category</td>
-				<td><a class="button tiny" href="/manage/books/edit/1">Edit</a></td>
-				<td><a class="button tiny alert removeBook" href="#">Delete</a></td>
-			</tr>
+			{#books}
+				<tr>
+					<td>{._id}</td>
+					<td>{.title}</td>
+					<td>{.category}</td>
+					<td><a class="button tiny" href="/manage/books/edit/{._id}">Edit</a></td>
+					<td><a class="button tiny alert removeBook" data-id="{._id}" href="#">Delete</a></td>
+				</tr>
+			{/books}
 		</tbody>
 	</table>
 {/body}

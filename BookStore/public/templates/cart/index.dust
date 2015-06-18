@@ -34,12 +34,13 @@
 						<h4>Total: <strong>${cart.total}</strong></h4>
 					</div>
 					<div class="large-6 columns">
+						<!-- Just an example paypal button...a real production site requires more than this -->
 						<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
 							<!-- Specifies Buy Now Button -->
 							<input type="hidden" name="cmd" value="_xclick">
 
 							<!-- PayPal Email -->
-							<input type="hidden" name="business" value="your_paypal_email@site.com">
+							<input type="hidden" name="business" value="paypal_email@site.com">
 
 							<!-- Item Name -->
 							<input type="hidden" name="item_name" value="BookStore Books">

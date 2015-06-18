@@ -4,7 +4,8 @@
 
 Project features:
 
-* Install and setup for Node.js
-* Handling HTTP requests
-* NPM
+* Learned install and setup for Node.js
+* Learned NPM
+* Create a server
+* Handle HTTP requests
 * Serving HTML files

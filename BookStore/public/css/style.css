@@ -76,6 +76,10 @@ ul.success li {
 	border-color: #d6e9c6;
 }
 
+/** CART **/
+h2 span {
+	font-size:18px;
+}
 
 /** footer **/
 footer {

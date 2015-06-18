@@ -1,0 +1,15 @@
+{>"layouts/master" /}
+
+{<title}
+	About BookStore
+{/title}
+
+{<body}
+	<div class="row">
+		<div class="large-12 columns">
+			<h2>About Us</h2>
+			<p>Duis in facilisis nisi. Nullam aliquam, metus at suscipit scelerisque, felis turpis aliquet nunc, non placerat mauris ligula at velit. Nunc consequat mi at pharetra mattis. Ut feugiat nulla eu ex blandit ultrices. Quisque vel tortor neque. Suspendisse a sagittis tellus. Nam sit amet risus at neque suscipit ultricies. Vestibulum in elit eu ante tristique tristique ut et neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed ultrices, neque ut pulvinar fermentum, leo velit porta ligula, quis porta risus leo a ante. Curabitur venenatis pellentesque erat, quis blandit eros lobortis a. Vestibulum rhoncus condimentum imperdiet. Nullam fringilla laoreet tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+			<p>Integer ultrices tortor maximus massa consectetur, sit amet lobortis tortor congue. Donec dictum metus nec risus luctus feugiat. Nunc et mollis risus, eu ullamcorper purus. Sed hendrerit convallis quam accumsan pulvinar. Nullam feugiat laoreet odio, nec tempor neque tempus non. Vestibulum eget semper lectus. Quisque mollis vitae turpis id rhoncus. Quisque ut semper ligula. Curabitur id vestibulum nibh. Morbi elementum, sem et ultrices interdum, felis purus auctor enim, et tincidunt nunc odio nec purus. Nulla ut leo faucibus, rutrum libero vel, posuere ligula. Maecenas vitae tincidunt tortor. Ut sit amet orci dui.</p>
+		</div>
+	</div>
+{/body}

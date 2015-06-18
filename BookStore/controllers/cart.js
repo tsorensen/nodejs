@@ -61,12 +61,7 @@ module.exports = function (router) {
 
     //remove cart item
     router.get('/removeItem/:id', function (req, res) {
-        req.session.cart = req.session.cart || {};
-        var cart = req.session.cart;
         var item = req.session.cart[req.params.id];
-
-        console.log(cart);
-        console.log(item);
 
         if(item.qty > 1) {
             item.qty = item.qty - 1;

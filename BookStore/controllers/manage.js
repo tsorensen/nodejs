@@ -54,7 +54,7 @@ module.exports = function (router) {
     });
 
 
-    //add new book
+    //add new BOOK
     router.post('/books', function (req, res) {
     	//get variables from post
     	var title = req.body.title && req.body.title.trim();
@@ -102,7 +102,7 @@ module.exports = function (router) {
     });
 
 
-	//display edit form
+	//display BOOK edit form
 	router.get('/books/edit/:id', function (req, res) {
 		Category.find({}, function(err, categories) {
 			Book.findOne({_id:req.params.id}, function(err, book) {
@@ -120,7 +120,7 @@ module.exports = function (router) {
 	});
 
 
-	//edit book
+	//edit BOOK
 	router.post('/books/edit/:id', function (req, res) {
 		var title = req.body.title && req.body.title.trim();
     	var category = req.body.category && req.body.category.trim();
@@ -150,7 +150,7 @@ module.exports = function (router) {
 	});
 
 
-	//delete book
+	//delete BOOK
 	router.delete('/books/delete/:id', function (req, res) {
 		Book.remove({_id: req.params.id}, function(err) {
 			if(err) {
@@ -164,13 +164,13 @@ module.exports = function (router) {
 	});
 
 
-	//display cateogry add form
+	//display CATEGORY add form
 	router.get('/categories/add', function (req, res) {
-		res.render('/manage/categories/add');
+		res.render('manage/categories/add');
 	});
 
 
-	//add a new category
+	//add a new CATEGORY
 	 router.post('/categories', function (req, res) {
     	//get variables from post
     	var name = req.body.name && req.body.name.trim();
@@ -198,4 +198,53 @@ module.exports = function (router) {
     		res.redirect('/manage/categories');
     	});
     });
+
+
+	 //display CATEGORY edit form
+	router.get('/categories/edit/:id', function (req, res) {
+		Category.findOne({_id: req.params.id}, function(err, category) {
+			if(err) {
+				console.log(err);
+			}
+
+			var model = {
+				category: category
+			};
+			res.render('manage/categories/edit', model);
+		});
+	});
+
+	//edit CATEGORY
+	router.post('/categories/edit/:id', function (req, res) {
+		//get name from post
+		var name = req.body.name && req.body.name.trim();
+
+		Category.update({_id: req.params.id}, {
+			name: name
+		}, function(err) {
+			if(err) {
+				console.log('update error', err);
+			}
+
+			req.flash('success', "Category updated");
+			res.location('/manage/categories');
+			res.redirect('/manage/categories');
+		});
+	});
+
+
+	//delete CATEGORY
+	router.delete('/categories/delete/:id', function (req, res) {
+		Category.remove({_id: req.params.id}, function(err) {
+			if(err) {
+				console.log(err);
+			}
+
+			req.flash('success', "Category deleted");
+			res.location('/manage/categories');
+			res.redirect('/manage/categories');
+		});
+	});
+
+
 };

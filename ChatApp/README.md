@@ -9,4 +9,4 @@ Project features:
 * Create and display usernames
 * Deploy app to [Heroku](https://www.heroku.com/)
 
-See it live [here](http://intense-ravine-2872.herokuapp.com/).
+See it live <a href="http://intense-ravine-2872.herokuapp.com/" target="_blank">here</a>.

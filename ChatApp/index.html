@@ -50,7 +50,9 @@
 			}
 
 			#error {
-				margin-bottom:15px;
+				margin-bottom:5px;
+				height: 20px;
+				color:red;
 			}
 
 			input {
@@ -112,7 +114,7 @@
 						$('#mainWrapper').show();
 					} else {
 						console.log('in here?');
-						$error.html('Username is already in use');
+						$error.html('Username is already in use, please choose another.');
 					}
 				});
 				$username.val('');

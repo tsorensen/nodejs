@@ -36,7 +36,7 @@ exports = module.exports = function(app, passport) {
   app.post('/contact/', require('./views/contact/index').sendMessage);
 
   //event routes
-  app.get('/events/', require('/views/events/index').find);
+  app.get('/events/', require('./views/events/index').find);
 
   //sign up
   app.get('/signup/', require('./views/signup/index').init);
